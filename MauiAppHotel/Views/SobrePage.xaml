@@ -2,29 +2,84 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.SobrePage"
-             Title="Sobre">
+             Title="Sobre"
+             BackgroundColor="{AppThemeBinding Light=#F8F9FA, Dark=#121212}">
 
     <ScrollView>
-        <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
+        <VerticalStackLayout Padding="30,40" Spacing="20" VerticalOptions="Center">
 
-            <Label Text="Informações do Aplicativo" 
-                   FontSize="22" 
-                   FontAttributes="Bold" 
-                   HorizontalOptions="Center" />
+            <!-- Ícone e Cabeçalho Principal -->
+            <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                <Label Text="🏨" FontSize="42" HorizontalOptions="Center" />
+                <Label Text="MauiAppHotel" 
+                       FontSize="24" 
+                       FontAttributes="Bold" 
+                       TextColor="{AppThemeBinding Light=#1E3A8A, Dark=#60A5FA}" 
+                       HorizontalOptions="Center" />
+                <Label Text="Sistema de Contratação de Hospedagem" 
+                       FontSize="13" 
+                       TextColor="{AppThemeBinding Light=#6B7280, Dark=#9CA3AF}" 
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
 
-            <Border Padding="20" Margin="0,10">
+            <!-- Card de Informações Clean -->
+            <Border Padding="20" 
+                    Margin="0,10"
+                    BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}"
+                    Stroke="{AppThemeBinding Light=#E5E7EB, Dark=#374151}"
+                    StrokeThickness="1">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="10"/>
+                    <RoundRectangle CornerRadius="14"/>
                 </Border.StrokeShape>
-                <VerticalStackLayout Spacing="10">
-                    <Label Text="Projeto: MauiAppLogin" FontAttributes="Bold" />
-                    <Label Text="Desenvolvedor: Filipe Berlanga" />
-                    <Label Text="Ano de Desenvolvimento: 2026" />
-                    <Label Text="Curso: Técnico em Desenvolvimento de Sistemas" />
+
+                <VerticalStackLayout Spacing="16">
+
+                    <!-- Desenvolvedor -->
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="Desenvolvedor" 
+                               FontSize="12" 
+                               TextColor="{AppThemeBinding Light=#6B7280, Dark=#9CA3AF}" />
+                        <Label Text="Filipe Berlanga" 
+                               FontSize="16" 
+                               FontAttributes="Bold" 
+                               TextColor="{AppThemeBinding Light=#111827, Dark=#F9FAFB}" />
+                    </VerticalStackLayout>
+
+                    <!-- Curso -->
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="Curso" 
+                               FontSize="12" 
+                               TextColor="{AppThemeBinding Light=#6B7280, Dark=#9CA3AF}" />
+                        <Label Text="Técnico em Desenvolvimento de Sistemas" 
+                               FontSize="15" 
+                               FontAttributes="Bold" 
+                               TextColor="{AppThemeBinding Light=#111827, Dark=#F9FAFB}" />
+                    </VerticalStackLayout>
+
+                    <!-- Ano de Desenvolvimento -->
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="Ano de Desenvolvimento" 
+                               FontSize="12" 
+                               TextColor="{AppThemeBinding Light=#6B7280, Dark=#9CA3AF}" />
+                        <Label Text="2026" 
+                               FontSize="15" 
+                               FontAttributes="Bold" 
+                               TextColor="{AppThemeBinding Light=#111827, Dark=#F9FAFB}" />
+                    </VerticalStackLayout>
+
                 </VerticalStackLayout>
             </Border>
 
-            <Button Text="Voltar" Clicked="BtnVoltar_Clicked" HorizontalOptions="Center" WidthRequest="150" />
+            <!-- Botão Voltar Estilizado -->
+            <Button Text="Voltar" 
+                    Clicked="BtnVoltar_Clicked" 
+                    HorizontalOptions="Center" 
+                    WidthRequest="180" 
+                    HeightRequest="46"
+                    CornerRadius="23"
+                    BackgroundColor="{AppThemeBinding Light=#1E3A8A, Dark=#2563EB}"
+                    TextColor="White"
+                    FontAttributes="Bold" />
 
         </VerticalStackLayout>
     </ScrollView>
