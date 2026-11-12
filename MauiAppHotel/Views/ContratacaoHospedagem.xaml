@@ -138,10 +138,15 @@
                             Margin="0,10,0,0" />
 
                     <!-- Botão Sobre (Texto Celeste) -->
-                    <Button Text="Sobre o Aplicativo" 
+                    <!--   <Button Text="Sobre o Aplicativo" 
                             Clicked="BtnSobre_Clicked" 
                             BackgroundColor="Transparent"
                             TextColor="#38BDF8"
+                            FontAttributes="Bold" /> -->
+                    <Button Text="Voltar ao Menu Principal"
+                            Clicked="BtnVoltar_Clicked"
+                            BackgroundColor="Transparent"
+                            TextColor="#94A3B8"
                             FontAttributes="Bold" />
 
                 </VerticalStackLayout>

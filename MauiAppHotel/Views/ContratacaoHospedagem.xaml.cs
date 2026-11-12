@@ -60,10 +60,10 @@ public partial class ContratacaoHospedagem : ContentPage
         { 
             await DisplayAlertAsync("Erro", ex.Message, "OK");
         } 
-    } 
-    
-     private async void BtnSobre_Clicked(object sender, EventArgs e) 
-    { 
-        await Navigation.PushAsync(new SobrePage()); 
-    } 
+    }
+
+    private async void BtnVoltar_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }                  

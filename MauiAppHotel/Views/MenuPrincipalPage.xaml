@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.MenuPrincipalPage"
+             Title="Menu Principal"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#0F172A">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25,40" Spacing="25" VerticalOptions="Center">
+
+            <!-- Cabeçalho / Logo -->
+            <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                <Label Text="🏨" FontSize="50" HorizontalOptions="Center" />
+                <Label Text="MauiApp MultiServiços" 
+                       FontSize="26" 
+                       FontAttributes="Bold" 
+                       TextColor="#38BDF8" 
+                       HorizontalOptions="Center" />
+                <Label Text="Selecione o serviço desejado" 
+                       FontSize="14" 
+                       TextColor="#94A3B8" 
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <!-- Card de Opções do Menu -->
+            <Frame Padding="20" BackgroundColor="#1E293B" BorderColor="#334155" CornerRadius="16">
+                <VerticalStackLayout Spacing="16">
+
+                    <!-- Botão 1: Hospedagem -->
+                    <Button Text="🛏️ Reserva de Hospedagem" 
+                            Clicked="BtnHospedagem_Clicked" 
+                            BackgroundColor="#6366F1" 
+                            TextColor="#FFFFFF" 
+                            FontAttributes="Bold" 
+                            CornerRadius="20" 
+                            HeightRequest="52" />
+
+                    <!-- Botão 2: Cadastro de Eventos -->
+                    <Button Text="🎉 Cadastrar Evento" 
+                            Clicked="BtnEventos_Clicked" 
+                            BackgroundColor="#0F172A" 
+                            TextColor="#38BDF8" 
+                            BorderColor="#334155"
+                            BorderWidth="1"
+                            FontAttributes="Bold" 
+                            CornerRadius="20" 
+                            HeightRequest="52" />
+
+                    <!-- Botão 3: Sobre -->
+                    <Button Text="ℹ️ Sobre o Aplicativo" 
+                            Clicked="BtnSobre_Clicked" 
+                            BackgroundColor="Transparent" 
+                            TextColor="#94A3B8" 
+                            FontAttributes="Bold" 
+                            HeightRequest="44" />
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

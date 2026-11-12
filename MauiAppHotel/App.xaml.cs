@@ -6,7 +6,9 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
+            //MainPage = new NavigationPage(new Views.CadastroEventoPage());
+            //MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
+            MainPage = new NavigationPage(new Views.MenuPrincipalPage());
             //MainPage = new NavigationPage(new MainPage());
         }
 
